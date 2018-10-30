@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="entity.Call" table="call" catalog="assigment2">
+        <id name="cid" type="java.lang.Long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="caller" type="java.lang.String">
+            <column name="caller" length="60" not-null="true" />
+        </property>
+        <property name="listener" type="java.lang.String">
+            <column name="listener" length="60" not-null="true"/>
+        </property>
+        <property name="start_date" type="time">
+            <column name="start_date" not-null="true"/>
+        </property>
+        <property name="duration" type="java.lang.Long">
+            <column name="duration" not-null="true"/>
+        </property>
+        <property name="cost" type="java.lang.Double">
+            <column name="cost" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

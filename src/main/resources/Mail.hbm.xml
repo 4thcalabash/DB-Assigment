@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="entity.Mail" table="mail" catalog="assigment2">
+        <id name="mid" type="java.lang.Long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="sender" type = "java.lang.String" length="60">
+            <column name="sender" not-null="true"/>
+        </property>
+        <property name="receiver" type="java.lang.String" length="60">
+            <column name="receiver" not-null="true"/>
+        </property>
+        <property name="date" type = "java.time.LocalDateTime">
+            <column name="send_date" not-null="true"/>
+        </property>
+        <property name="cost" type="java.lang.Double">
+            <column name="cost" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

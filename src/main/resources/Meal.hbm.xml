@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="entity.Meal" table="meal" catalog="assigment2">
+        <id name="mid" type="java.lang.Long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="owner" type="java.lang.String" length="60">
+            <column name="owner" not-null="true"/>
+        </property>
+        <property name="cost" type="java.lang.Double">
+            <column name="cost" not-null="true"/>
+        </property>
+        <property name="freeCall" type = "java.lang.Double">
+            <column name="free_call" not-null="true"/>
+        </property>
+        <property name="freeMail" type="java.lang.Integer">
+            <column name="free_mail" not-null="true"/>
+        </property>
+        <property name="freeLocalFlow" type="java.lang.Double">
+            <column name="free_local_flow" not-null="true"/>
+        </property>
+        <property name="freeNationFlow" type="java.lang.Double">
+            <column name="free_nation_flow" not-null="true"/>
+        </property>
+        <property name="exceedCallCost" type="java.lang.Double">
+            <column name="exceed_call_cost" not-null="true"/>
+        </property>
+        <property name="exceedMailCost" type="java.lang.Double">
+            <column name="exceed_mail_cost" not-null="true"/>
+        </property>
+        <property name="exceedLocalFlowCost" type="java.lang.Double">
+            <column name="exceed_local_flow_cost" not-null="true"/>
+        </property>
+        <property name="exceedNationFlowCost" type="java.lang.Double">
+            <column name="exceed_nation_flow_cost" not-null="true"/>
+        </property>
+        <property name="startDate" type="java.time.LocalDateTime">
+            <column name="start_date" not-null="true"/>
+        </property>
+        <property name="endDate" type="java.time.LocalDateTime">
+            <column name="end_date" not-null="false"/>
+        </property>
+    </class>
+</hibernate-mapping>

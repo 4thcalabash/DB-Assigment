@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="entity.Flow" table="flow" catalog="assigment2">
+        <id name="fid" type="java.lang.Long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="type" type="java.lang.String">
+            <column name="flow_type" not-null="true"/>
+
+        </property>
+        <property name="user" type="java.lang.String" length="60">
+            <column name="caller" not-null="true"/>
+        </property>
+        <property name="amount" type = "java.lang.Double">
+            <column name="amount" not-null="true"/>
+        </property>
+        <property name="date" type = "java.time.LocalDateTime">
+            <column name="start_date" not-null="true"/>
+        </property>
+        <property name="duration" type = "java.lang.Long">
+            <column name="duration" not-null="true"/>
+        </property>
+        <property name="cost" type="java.lang.Double">
+            <column name="cost" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
